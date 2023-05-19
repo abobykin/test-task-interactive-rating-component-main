@@ -33,6 +33,13 @@ main fieldset {
 main h2 {
   font-size: 22px;
   color: white;
+  margin-bottom: 14px;
+}
+
+main p {
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
 }
 
 .rating-state,
@@ -42,6 +49,7 @@ main h2 {
   justify-content: space-between;
   align-items: flex-start;
   width: 327px;
+  min-height: 362px;
   padding: 24px 24px 32px;
   color: var(--light-grey);
   background: rgb(35, 42, 52);
@@ -52,6 +60,21 @@ main h2 {
   );
   background-position: top top;
   border-radius: 12px;
+}
+
+.thank-you-state {
+  align-items: center;
+  text-align: center;
+  padding: 35px 27px 35px;
+}
+
+.selected-rating {
+  color: var(--orange);
+  background-color: var(--dark-blue);
+  padding: 7px 11px;
+  border-radius: 14px;
+  font-size: 14px;
+  margin: 20px 0 7px;
 }
 
 .icon-star {
@@ -70,21 +93,13 @@ main h2 {
 }
 
 .rating {
-  margin: 27px 0 20px;
   display: flex;
   justify-content: space-between;
+  margin: 25px 0;
 }
 
-.rating input {
-  appearance: none;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+.rating label {
+  position: relative;
 }
 
 .rating .vote-button {
@@ -94,8 +109,30 @@ main h2 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  padding-top: 0.1em;
+  font-size: 13px;
   background-color: var(--dark-blue);
   color: var(--light-grey);
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.rating input:checked + .vote-button {
+  background-color: var(--medium-grey);
+  color: white;
+  cursor: default;
+}
+
+.rating input:focus + .vote-button {
+  border-color: var(--medium-grey);
+  color: white;
+  cursor: default;
+}
+
+.rating .vote-button:hover {
+  background-color: var(--orange);
+  color: white;
+  cursor: pointer;
 }
 
 .rating-state form {
@@ -118,19 +155,31 @@ main h2 {
   border-radius: 23px;
 }
 
-.rating-state .submit-button:hover {
-  cursor: pointer;
-}
-
-.rating-state .submit-button:hover,
-.rating-state input[type='submit']:disabled {
+.rating-state input.submit-button:disabled {
   background-color: white;
   color: #fc7613;
   cursor: default;
 }
 
+.rating-state .submit-button:hover {
+  background-color: white;
+  color: #fc7613;
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
 }
 
 .sr-only {
@@ -147,4 +196,58 @@ main h2 {
 /* Responsiveness */
 
 @media screen and (min-width: 980px) {
+  .main {
+    padding: 195px 0;
+  }
+
+  main h2 {
+    font-size: 26px;
+  }
+
+  main p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .rating-state,
+  .thank-you-state {
+    width: 410px;
+    padding: 32px;
+    min-height: 415px;
+    border-radius: 24px;
+  }
+
+  .thank-you-state {
+    padding: 42px 35px;
+  }
+
+  .icon-star {
+    height: 50px;
+    width: 50px;
+  }
+
+  .icon-star img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .rating {
+    margin: 25px 0 27px;
+  }
+
+  .rating .vote-button {
+    font-size: 15px;
+    height: 52px;
+    width: 52px;
+  }
+
+  .rating-state .submit-button {
+    font-size: 15px;
+  }
+
+  .selected-rating {
+    padding: 7px 18px;
+    font-size: 15px;
+    margin: 30px 0 10px;
+  }
 }

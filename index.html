@@ -30,27 +30,65 @@
           <img src="images/icon-star.svg" alt="Icon star" />
         </span>
 
-        <h2>How did we do?</h2>
-
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
+        <div class="rating-state__description">
+          <h2>How did we do?</h2>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
 
         <form action="" id="ratingForm">
           <fieldset class="rating">
-            <label class="vote-button" for="1" title="1">
-              <input type="radio" id="1" name="rating" value="1" />1
+            <label title="Set 1">
+              <input
+                type="radio"
+                name="rating"
+                value="1"
+                class="visually-hidden"
+                id="1"
+              />
+              <span class="vote-button">1</span>
             </label>
-            <label class="vote-button" for="2" title="2">
-              <input type="radio" id="2" name="rating" value="2" />2
+            <label title="Set 2">
+              <input
+                type="radio"
+                name="rating"
+                value="2"
+                class="visually-hidden"
+                id="2"
+              />
+              <span class="vote-button">2</span>
             </label>
-            <label class="vote-button" for="3" title="3">
-              <input type="radio" id="3" name="rating" value="3" />3
+            <label title="Set 3">
+              <input
+                type="radio"
+                name="rating"
+                value="3"
+                class="visually-hidden"
+                id="3"
+              />
+              <span class="vote-button">3</span>
             </label>
-            <label class="vote-button" for="4" title="4">
-              <input type="radio" id="4" name="rating" value="4" />4
+            <label title="Set 4">
+              <input
+                type="radio"
+                name="rating"
+                value="4"
+                class="visually-hidden"
+                id="4"
+              />
+              <span class="vote-button">4</span>
             </label>
-            <label class="vote-button" for="5" title="5">
-              <input type="radio" id="5" name="rating" value="5" />5
+            <label title="Set 5">
+              <input
+                type="radio"
+                name="rating"
+                value="5"
+                class="visually-hidden"
+                id="5"
+              />
+              <span class="vote-button">5</span>
             </label>
           </fieldset>
 
@@ -65,10 +103,21 @@
       </section>
 
       <section class="thank-you-state hidden">
-        You selected
-        <strong id="ratingValue">...</strong>
-        out of 5 Thank you! We appreciate you taking the time to give a rating.
-        If you ever need more support, don’t hesitate to get in touch!
+        <img src="./images/illustration-thank-you.svg" alt="Thank you" />
+
+        <div class="selected-rating">
+          You selected
+          <strong id="ratingValue"></strong>
+          out of 5
+        </div>
+
+        <div class="thank-you-state__description">
+          <h2>Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
       </section>
     </main>
 
