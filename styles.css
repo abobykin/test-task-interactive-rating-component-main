@@ -27,6 +27,7 @@ main {
 
 main fieldset {
   border: none;
+  padding: 0;
 }
 
 main h2 {
@@ -41,7 +42,7 @@ main h2 {
   justify-content: space-between;
   align-items: flex-start;
   width: 327px;
-  padding: 30px;
+  padding: 24px 24px 32px;
   color: var(--light-grey);
   background: rgb(35, 42, 52);
   background-image: radial-gradient(
@@ -54,8 +55,8 @@ main h2 {
 }
 
 .icon-star {
-  height: 42px;
-  width: 42px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -66,6 +67,66 @@ main h2 {
 .icon-star img {
   width: 13px;
   height: 13px;
+}
+
+.rating {
+  margin: 27px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating input {
+  appearance: none;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.rating .vote-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+  color: var(--light-grey);
+}
+
+.rating-state form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rating-state .submit-button {
+  display: flex;
+  justify-content: center;
+  background-color: #fc7613;
+  color: white;
+  transition: all 0.3s;
+  height: 46px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 23px;
+}
+
+.rating-state .submit-button:hover {
+  cursor: pointer;
+}
+
+.rating-state .submit-button:hover,
+.rating-state input[type='submit']:disabled {
+  background-color: white;
+  color: #fc7613;
+  cursor: default;
 }
 
 .hidden {
