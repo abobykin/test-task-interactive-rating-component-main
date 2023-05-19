@@ -44,11 +44,13 @@ main h2 {
   padding: 30px;
   color: var(--light-grey);
   background: rgb(35, 42, 52);
-  background: radial-gradient(
-    circle,
-    rgba(35, 42, 52, 1) 0%,
-    rgba(23, 30, 40, 1) 100%
+  background-image: radial-gradient(
+    farthest-corner at top center,
+    rgba(35, 42, 52, 1) 0% 0%,
+    rgba(23, 30, 40, 1) 100% 100%
   );
+  background-position: top top;
+  border-radius: 12px;
 }
 
 .icon-star {
