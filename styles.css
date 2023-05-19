@@ -1,0 +1,87 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--very-dark-blue);
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 155px 0;
+}
+
+main fieldset {
+  border: none;
+}
+
+main h2 {
+  font-size: 22px;
+  color: white;
+}
+
+.rating-state,
+.thank-you-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 327px;
+  padding: 30px;
+  color: var(--light-grey);
+  background: rgb(35, 42, 52);
+  background: radial-gradient(
+    circle,
+    rgba(35, 42, 52, 1) 0%,
+    rgba(23, 30, 40, 1) 100%
+  );
+}
+
+.icon-star {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+}
+
+.icon-star img {
+  width: 13px;
+  height: 13px;
+}
+
+.hidden {
+  display: none;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsiveness */
+
+@media screen and (min-width: 980px) {
+}

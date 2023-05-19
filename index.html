@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Interactive rating component</h1>
+
+      <section class="rating-state">
+        <span class="icon-star">
+          <img src="images/icon-star.svg" alt="Icon star" />
+        </span>
+
+        <h2>How did we do?</h2>
+
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+
+        <form action="" id="ratingForm">
+          <fieldset class="rating">
+            <input type="radio" id="1" name="rating" value="1" /><label
+              class="vote-button"
+              for="1"
+              title="1"
+              >1</label
+            >
+            <input type="radio" id="2" name="rating" value="2" /><label
+              class="vote-button"
+              for="2"
+              title="2"
+              >2</label
+            >
+            <input type="radio" id="3" name="rating" value="3" /><label
+              class="vote-button"
+              for="3"
+              title="3"
+              >3</label
+            >
+            <input type="radio" id="4" name="rating" value="4" /><label
+              class="vote-button"
+              for="4"
+              title="4"
+              >4</label
+            >
+            <input type="radio" id="5" name="rating" value="5" /><label
+              class="vote-button"
+              for="5"
+              title="5"
+              >5</label
+            >
+          </fieldset>
+
+          <input
+            disabled
+            type="submit"
+            id="submit"
+            value="Submit"
+            class="submit-button"
+          />
+        </form>
+      </section>
+
+      <section class="thank-you-state hidden">
+        You selected
+        <strong id="ratingValue">...</strong>
+        out of 5 Thank you! We appreciate you taking the time to give a rating.
+        If you ever need more support, don’t hesitate to get in touch!
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
